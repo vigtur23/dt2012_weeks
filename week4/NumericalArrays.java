@@ -150,11 +150,12 @@ public class NumericalArrays{
 	   as argument.
 	   */
 	public static double sum(double[] numarray){
-		// Your code here.
-		// Remove the
-		//     return 0;
-		// before placing your code
-		return 0;
+		double sum = 0;
+		for (int i = 0; i < numarray.length; i++)
+		{
+			sum += numarray[i];
+		}
+		return sum;
 	}
 
 	/*
@@ -162,11 +163,12 @@ public class NumericalArrays{
 	   as argument.
 	   */
 	public static int sum(int[] numarray){
-		// Your code here.
-		// Remove the
-		//     return 0;
-		// before placing your code
-		return 0;
+		int sum = 0;
+		for (int i = 0; i < numarray.length; i++)
+		{
+			sum += numarray[i];
+		}
+		return sum;
 	}
 
 	/*
@@ -174,11 +176,7 @@ public class NumericalArrays{
 	   argument.
 	   */
 	public static double average(double[] numarray){
-		// Your code here.
-		// Remove the
-		//     return 0;
-		// before placing your code
-		return 0;
+		return sum(numarray)/numarray.length;
 	}
 
 	/*
@@ -186,11 +184,16 @@ public class NumericalArrays{
 	   it gets as argument.
 	   */
 	public static double standardDeviation(double[] numarray){
-		// Your code here.
-		// Remove the
-		//     return 0;
-		// before placing your code
-		return 0;
+		double avg = average(numarray);
+		double variance = 0;
+
+		for (int i = 0; i < numarray.length; i++)
+		{
+			variance += (numarray[i] - avg) * (numarray[i]-avg);
+		}
+		variance /= numarray.length;
+
+		return Math.sqrt(variance);
 	}
 
 
@@ -202,11 +205,12 @@ public class NumericalArrays{
 	   The result is the dot product: a0*b0 + a1*b1 + ... + an*bn
 	   */
 	public static double dotproduct(double[] a, double[] b){
-		// Your code here.
-		// Remove the
-		//     return 0;
-		// before placing your code
-		return 0;
+		double p = 0;
+		for (int i = 0; i < a.length; i++)
+		{
+			p += a[i]*b[i];
+		}
+		return p;
 	}
 
 	/*
@@ -266,7 +270,12 @@ public class NumericalArrays{
 	 uses this method, they should not be set in the method.
 	 */
 	public static void plot(double[] numarray){
-		// Your code here.
+		StdDraw.setXscale(0, numarray.length);
+		StdDraw.setYscale(0, max(numarray));
+		for (int i = 0; i < numarray.length; i++)
+		{
+			StdDraw.point(i, numarray[i]);
+		}
 	}
 
 	/*
@@ -285,7 +294,12 @@ public class NumericalArrays{
 	 uses this method, they should not be set in the method.
 	 */
 	public static void plot(int[] numarray){
-		// Your code here.
+		StdDraw.setXscale(0, numarray.length);
+		StdDraw.setYscale(0, max(numarray));
+		for (int i = 0; i < numarray.length; i++)
+		{
+			StdDraw.point(i, numarray[i]);
+		}
 	}
 
 	/*
@@ -303,13 +317,22 @@ public class NumericalArrays{
 
 	   Complete the definition of the method running average.
 	   */
-	public static double[]  runningAverage(double[] values, int window){
-		// Your code here.
-		// Remove the
-		//     return new double[]{};
-		// before placing your code
-		return new double[]{};
+	public static double[] runningAverage(double[] values, int window){
+		double[] totals = new double[values.length];
 
+		double total = 0;
+		int index = 0;
+		double samples[]= new double[window];
+		for (int i = 0; i < window; i++) samples[i] = 0;
+
+		for (int i = 0; i < values.length; i++) {
+			total -= samples[index];
+			samples[index] = values[i];
+			total += values[i];
+			if (++index == window) index = 0;
+			totals[i] = total / window;
+		}
+		return totals;
 	}
 
 
@@ -351,20 +374,18 @@ public class NumericalArrays{
 
 		System.out.println("sum(repeat(3,5)) = " + sum(repeat(3,5)));
 
-		/*
-		   StdDraw.setPenRadius(0.01);
-		   StdDraw.setPenColor(StdDraw.BLACK);
-		   plot(x);
+		StdDraw.setPenRadius(0.01);
+		StdDraw.setPenColor(StdDraw.BLACK);
+		plot(x);
 
 		// draw the coordinates in the canvas for x.
 		StdDraw.setPenColor(StdDraw.RED);
 		for(int i = 1; i < 4; i++){
-		StdDraw.point(0,i);
+			StdDraw.point(0,i);
 		}
 		for(int i = 1; i < 10; i++){
-		StdDraw.point(i,0);
+			StdDraw.point(i,0);
 		}
-		*/
 
 	}
 }
