@@ -1,0 +1,50 @@
+Övningar för vecka 1
+
+I varje java-fil finns en uppgift.
+
+Uppgiften förklaras på engelska i den inledande kommentaren.
+Det finns också en PDF fil med alla uppgifter på svenska.
+
+Tänk på att använda det vi har presenterat under första vecka:
+  * Bara 2 kommandon:
+      * tilldelning och
+      * System.out.println.
+    Det behövs inga andra kommandon för att lösa uppgifterna.
+  * Många operationer och några metoder för att bygga upp uttryck
+    i olika typer.
+
+Lös uppgifterna genom att ändra i respektive java-fil.
+Ändra inte på filnamn eller klassnamn.
+
+Börja alltid med att kompilera filen och köra programmet
+innan du löser uppgiften. Till exempel, med E1.java börja med
+att i terminalen göra
+
+>   javac E1.java
+>   java E1
+
+I visa fall kommer du att behöva använda kommandoradsargument,
+som i
+
+> javac E2.java
+> java E2 vero
+
+(Du kan testa med andra kommandoradsargument än vero!)
+
+När du har löst en uppgift ska du kompilera och köra igen
+för att testa din lösning. I visa fall kommer du att behöva testa
+med olika kombinationer av kommandoradsargument för att bli
+någorlunda övertygad att du har löst uppgiften.
+
+När du har löst alla uppgifterna packar du alla java-filer
+i en zip fil och laddar upp zip-filen i Blackboard.
+Du måste följa instruktionerna i Blackboard vad gäller namn
+på den mapp där du har dina java filer och namn på zip filen.
+
+Om du behöver förklara något kan du använda en kommentar i
+java-filen. I så fall måste du skriva en eller flera fullständiga
+meningar på korrekt svenska eller engelska. Filen måste fortfarande
+gå att kompilera.
+
+Lösningar som inte kompilerar eller som lämnas in på annat sätt
+än hur det beskrevs ovan, blir inte godkända.

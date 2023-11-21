@@ -1,0 +1,37 @@
+e1:
+  answer: "Hello, world!
+Welcome to the programming course!"
+e2:
+  args: "vero"
+  answer: "Welcome to the course vero and hope you enjoy coding!"
+e3:
+  args: "10 20"
+  answer: "The value of a is 10
+and the value of b is 20
+The value of a is now 20
+and the value of b is now 10"
+e4:
+  args: "8 78"
+  answer: "In 78 hours the time would be 14"
+e5:
+  args: "3 4 5"
+  answer: "[3 + 4] in Z_5 is 2
+[3 * 4] in Z_5 is 2"
+e6:
+  args: "123"
+  answer: "[ 3 divides 123 ] is true"
+e7:
+  args: "4 6"
+  answer: "[ 4 divides 6 ] is false"
+e8:
+  args: "1 2 3"
+  answer: "The distance to 0,0,0 is 3.7416573867739413"
+e9:
+  manual_test: true
+e10:
+  manual_test: true
+e11:
+  args: "5 9 1"
+  answer: "1 5 9"
+bonus:
+  manual_test: true
