@@ -27,7 +27,7 @@ add_test(NAME TestE6 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E6 /home/vi
 add_test(NAME TestE7 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E7 /home/vigor/school/hh/dt2012/week5/baboon.jpg 0.5)
 add_test(NAME TestE8 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E8 /home/vigor/school/hh/dt2012/week5/baboon.jpg 10 0 0 0)
 add_test(NAME TestE9 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E9 /home/vigor/school/hh/dt2012/week5/baboon.jpg 50 20 200 40)
-add_test(NAME Bonus COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} Bonus)
+add_test(NAME Bonus COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} Bonus /home/vigor/school/hh/dt2012/week5/baboon.jpg 50 20 200 40)
 
 add_custom_target(log
 	COMMAND cat Testing/Temporary/LastTest.log
