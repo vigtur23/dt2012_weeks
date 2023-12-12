@@ -57,7 +57,7 @@ public class DiceView2 extends JPanel{
 
 	public DiceView2(DiceModel dm){
 		this.dm = dm;
-		setBackground(Color.WHITE);
+		setBackground(new Color(0, 100, 0));
 		setOpaque(true);
 		Border b = BorderFactory.createEtchedBorder(EtchedBorder.LOWERED);
 		Border tb = BorderFactory.createTitledBorder(b, "Your dice");
