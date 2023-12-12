@@ -22,6 +22,7 @@ message(STATUS "Class compiled to ${_classDir}")
 add_test(NAME TestE1 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E1)
 add_test(NAME TestE2 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E5)
 add_test(NAME TestE3 COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} E8)
+add_test(NAME TestBonus COMMAND ${Java_JAVA_EXECUTABLE} -cp ${_jarFile} Bonus)
 
 add_custom_target(log
 	COMMAND cat Testing/Temporary/LastTest.log
